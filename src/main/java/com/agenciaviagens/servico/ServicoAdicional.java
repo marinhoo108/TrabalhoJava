@@ -1,13 +1,23 @@
 package com.agenciaviagens.servico;
 
-public abstract class ServicoAdicional {
-
+public class ServicoAdicional {
+    private int id;
     private String nome;
+    private String descricao;
     private double preco;
 
-    public ServicoAdicional(String nome, double preco) {
+    public ServicoAdicional(String nome, String descricao, double preco) {
         this.nome = nome;
+        this.descricao = descricao;
         this.preco = preco;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -18,6 +28,14 @@ public abstract class ServicoAdicional {
         this.nome = nome;
     }
 
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
     public double getPreco() {
         return preco;
     }
@@ -25,4 +43,15 @@ public abstract class ServicoAdicional {
     public void setPreco(double preco) {
         this.preco = preco;
     }
+
+    @Override
+    public String toString() {
+        return "ServicoAdicional{" +
+                "id=" + id +
+                ", nome=\'" + nome + "\'" +
+                ", descricao=\'" + descricao + "\'" +
+                ", preco=" + preco +
+                "}";
+    }
 }
+

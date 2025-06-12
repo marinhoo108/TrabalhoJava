@@ -45,4 +45,7 @@ public abstract class PacoteViagem {
     public void setPreco(double preco) {
         this.preco = preco;
     }
+
+    public abstract String toString();
 }
+
